@@ -101,3 +101,52 @@ def load_model(path):
 
 
 def compute_slice_metrics(
+    df, feature, model, encoder, lb, cat_features, label="salary"
+):
+    """ Computes performance metrics on slices of data for a given feature.
+
+    Inputs
+    ------
+    df : pd.DataFrame
+        Dataframe containing the feature and label.
+    feature : str
+        Name of the feature to slice on.
+    model : object
+        Trained model.
+    encoder : OneHotEncoder
+        Trained encoder.
+    lb : LabelBinarizer
+        Trained label binarizer.
+    cat_features : list[str]
+        Categorical features list.
+    label : str
+        Target label column.
+    Returns
+    -------
+    slice_metrics : list[dict]
+        List of metric dictionaries for each unique value in feature.
+    """
+    slice_metrics = []
+    for val in sorted(df[feature].dropna().unique()):
+        slice_df = df[df[feature] == val]
+        if len(slice_df) == 0:
+            continue
+        X_slice, y_slice, _, _ = process_data(
+            slice_df,
+            categorical_features=cat_features,
+            label=label,
+            training=False,
+            encoder=encoder,
+            lb=lb,
+        )
+        preds = inference(model, X_slice)
+        precision, recall, fbeta = compute_model_metrics(y_slice, preds)
+        slice_metrics.append({
+            "feature": feature,
+            "value": str(val),
+            "count": len(slice_df),
+            "precision": float(precision),
+            "recall": float(recall),
+            "fbeta": float(fbeta),
+        })
+    return slice_metrics
