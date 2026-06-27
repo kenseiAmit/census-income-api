@@ -132,3 +132,27 @@ class PredictionResponse(BaseModel):
 
 @app.get("/")
 def get_root() -> Dict[str, str]:
+    """Root GET endpoint returning a greeting."""
+    return {"greeting": "Welcome to the Census Income Prediction API!"}
+
+
+@app.post("/predict", response_model=PredictionResponse)
+@app.post("/model", response_model=PredictionResponse)
+def predict_model(payload: CensusInput) -> PredictionResponse:
+    """POST endpoint performing model inference."""
+    try:
+        model, encoder, lb = get_artifacts()
+        row_dict = payload.model_dump(by_alias=True)
+        df = pd.DataFrame([row_dict])
+        X, _, _, _ = process_data(
+            df,
+            categorical_features=cat_features,
+            training=False,
+            encoder=encoder,
+            lb=lb,
+        )
+        preds = inference(model, X)
+        pred_label = lb.inverse_transform(preds)[0]
+        return PredictionResponse(prediction=str(pred_label))
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
