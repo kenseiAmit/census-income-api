@@ -15,6 +15,17 @@ An end-to-end production Machine Learning service predicting annual income brack
 
 ## Architecture & Highlights
 
+![Demographic Slice Fairness Audit](screenshots/demographic_slice_fairness_chart.png)
+
+```mermaid
+flowchart LR
+    A["data/census.csv<br/>(32,562 Rows)"] --> B["80/20 Split<br/>(Leakage-Safe Fit on Train)"]
+    B --> C["OneHotEncoder + LabelBinarizer<br/>+ RandomForestClassifier"]
+    C --> D["compute_slice_metrics()<br/>8 Demographic Dimensions -> slice_output.txt"]
+    C --> E["FastAPI Service (main.py)<br/>GET / & POST /predict"]
+    E --> F["GitHub Actions CI (Flake8 + Pytest)<br/>-> Render Cloud Auto-Deploy"]
+```
+
 - **Leakage-Safe Feature Pipeline (`income_classifier/ml/data.py`):** Fits `OneHotEncoder(handle_unknown="ignore")` and `LabelBinarizer` strictly on training splits and reuses serialized artifacts during validation and real-time API inference.
 - **Demographic Slice Fairness Auditing (`income_classifier/ml/model.py`):** Computes Precision, Recall, and $F_1$ across every categorical slice (`workclass`, `education`, `marital-status`, `occupation`, `relationship`, `race`, `sex`, `native-country`)—persisted in [`slice_output.txt`](slice_output.txt) and documented in [`MODEL_CARD.md`](MODEL_CARD.md).
 - **Typed FastAPI Service (`main.py`):** Exposes health/greeting (`GET /`) and inference (`POST /predict`) with Pydantic field aliases matching hyphenated census attributes (`education-num`, `marital-status`, `hours-per-week`).
@@ -105,6 +116,9 @@ python live_post.py --url http://127.0.0.1:8000/predict
 | Live GET `/` Response (`200 OK`) | Automated CI/CD Pipeline |
 |---|---|
 | ![Live GET](screenshots/live_get.png) | ![CI Pipeline](screenshots/continuous_integration.png) |
+
+### Render Continuous Deployment Hook
+![Continuous Deployment](screenshots/continuous_deployment.png)
 
 ---
 
