@@ -60,3 +60,54 @@ See [`MODEL_CARD.md`](MODEL_CARD.md) and [`slice_output.txt`](slice_output.txt) 
 |:---|:---|---:|---:|---:|---:|
 | **Education** | `Prof-school` | 116 | `0.8298` | `0.9286` | **`0.8764`** |
 | **Education** | `Doctorate` | 77 | `0.8500` | `0.8947` | **`0.8718`** |
+| **Education** | `Masters` | 369 | `0.8119` | `0.8551` | **`0.8329`** |
+| **Education** | `Bachelors` | 1,053 | `0.7444` | `0.8089` | **`0.7753`** |
+| **Education** | `HS-grad` | 2,085 | `0.9195` | `0.2319` | `0.3704` |
+| **Sex** | `Male` | 4,387 | `0.7893` | `0.5964` | `0.6794` |
+| **Sex** | `Female` | 2,126 | `0.7737` | `0.4549` | `0.5730` |
+| **Race** | `Asian-Pac-Islander` | 193 | `0.7667` | `0.7419` | `0.7541` |
+| **Race** | `White` | 5,595 | `0.7903` | `0.5700` | `0.6623` |
+| **Race** | `Black` | 599 | `0.7447` | `0.5385` | `0.6250` |
+
+---
+
+## Quick Start
+
+```bash
+git clone https://github.com/kenseiAmit/census-income-api.git
+cd census-income-api
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install --no-build-isolation -e .
+
+# Retrain model & regenerate slice fairness metrics
+python -m income_classifier.train_model
+
+# Run unit & API test suite + strict PEP8 lint check
+pytest -v
+flake8 . --count --max-complexity=10 --max-line-length=79 --statistics
+
+# Launch FastAPI server locally
+uvicorn main:app --reload --host 127.0.0.1 --port 8000
+```
+
+### Sample Inference Request
+```bash
+python live_post.py --url http://127.0.0.1:8000/predict
+```
+
+| OpenAPI Schema (`/docs`) | Live Render Health & Inference |
+|---|---|
+| ![Swagger UI](screenshots/example.png) | ![Live POST](screenshots/live_post.svg) |
+
+| Live GET `/` Response (`200 OK`) | Automated CI/CD Pipeline |
+|---|---|
+| ![Live GET](screenshots/live_get.png) | ![CI Pipeline](screenshots/continuous_integration.png) |
+
+---
+
+## License
+
+Released under the [MIT License](LICENSE).

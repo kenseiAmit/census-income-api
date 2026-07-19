@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="460" viewBox="0 0 820 460">
+  <rect width="820" height="460" rx="10" fill="#14171f"/>
+  <rect width="820" height="36" rx="10" fill="#212633"/>
+  <circle cx="20" cy="18" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="18" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="18" r="6" fill="#27c93f"/>
+  <text x="410" y="23" text-anchor="middle" fill="#9aa5b1" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">live_post.py — Live Cloud Inference Verification</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13.5" fill="#e6edf3">
+    <text x="24" y="68" fill="#7ee787">$ python live_post.py --url https://census-income-api-3hq5.onrender.com/predict</text>
+    <text x="24" y="96" fill="#79c0ff">Sending POST request to: https://census-income-api-3hq5.onrender.com/predict</text>
+    <text x="24" y="118">Payload:</text>
+    <text x="40" y="138" fill="#c9d1d9">age: 31  |  workclass: Private  |  fnlgt: 45781</text>
+    <text x="40" y="158" fill="#c9d1d9">education: Masters  |  education-num: 14</text>
+    <text x="40" y="178" fill="#c9d1d9">marital-status: Never-married  |  occupation: Prof-specialty</text>
+    <text x="40" y="198" fill="#c9d1d9">relationship: Not-in-family  |  race: White  |  sex: Female</text>
+    <text x="40" y="218" fill="#c9d1d9">capital-gain: 14084  |  capital-loss: 0  |  hours-per-week: 50</text>
+    <text x="40" y="238" fill="#c9d1d9">native-country: United-States</text>
+    <text x="24" y="276" fill="#d2a8ff">Response Received:</text>
+    <text x="24" y="300" fill="#7ee787">HTTP Status Code: 200</text>
+    <text x="24" y="324" fill="#ffa657">Inference Result: {'prediction': '&gt;50K'}</text>
+    <text x="24" y="368" fill="#8b949e"># Health Check Endpoint (GET /):</text>
+    <text x="24" y="390" fill="#7ee787">$ curl -s https://census-income-api-3hq5.onrender.com/</text>
+    <text x="24" y="414" fill="#ffa657">{"greeting":"Welcome to the Census Income Prediction API!"}</text>
+  </g>
+</svg>
