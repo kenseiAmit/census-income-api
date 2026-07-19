@@ -17,44 +17,41 @@
   <circle cx="68" cy="22" r="6.5" fill="#10B981"/>
   <text x="540" y="27" text-anchor="middle" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12.5" font-weight="600">census-income-api — Slice Fairness Audit &amp; FastAPI Verification</text>
 
-  <!-- Command Prompt Line -->
+  <!-- Command Prompt Line with Native Inline Blinking Cursor -->
   <text x="28" y="82" fill="#10B981" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="700">❯</text>
-  <text x="48" y="82" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="600">pytest -v &amp;&amp; python -m income_classifier.train_model</text>
-  <rect x="491" y="68" width="8" height="17" fill="#38BDF8">
-    <animate attributeName="opacity" values="1;0;1" dur="1.0s" repeatCount="indefinite"/>
-  </rect>
+  <text x="48" y="82" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="600">pytest -v &amp;&amp; python -m income_classifier.train_model<tspan dx="6" fill="#38BDF8">&#9608;<animate attributeName="opacity" values="1;0;1" dur="1.0s" repeatCount="indefinite"/></tspan></text>
   <line x1="28" y1="98" x2="1052" y2="98" stroke="#1E293B" stroke-width="1"/>
 
   <!-- Animated Execution Trace Steps -->
   
     <g opacity="0">
       <animate attributeName="opacity" keyTimes="0;0.039999999999999994;0.06;0.93;0.98;1" values="0;0;1;1;0;0" dur="14.0s" repeatCount="indefinite"/>
-      <rect x="28" y="116" width="68" height="23" rx="5" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-opacity="0.65" stroke-width="1"/>
-      <text x="62" y="132" text-anchor="middle" fill="#10B981" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">LINT</text>
-      <text x="108" y="132" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">flake8 --max-complexity=10 --max-line-length=79     -&gt; 0 errors</text>
+      <rect x="28" y="116" width="76" height="23" rx="5" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-opacity="0.65" stroke-width="1"/>
+      <text x="66" y="132" text-anchor="middle" fill="#10B981" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">LINT</text>
+      <text x="118" y="132" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">flake8 --max-complexity=10 --max-line-length=79     -&gt; 0 errors</text>
     </g>
     <g opacity="0">
       <animate attributeName="opacity" keyTimes="0;0.115;0.135;0.93;0.98;1" values="0;0;1;1;0;0" dur="14.0s" repeatCount="indefinite"/>
-      <rect x="28" y="150" width="68" height="23" rx="5" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-opacity="0.65" stroke-width="1"/>
-      <text x="62" y="166" text-anchor="middle" fill="#10B981" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">TEST</text>
-      <text x="108" y="166" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">tests/test_ml.py + tests/test_api.py                -&gt; 9/9 passed</text>
+      <rect x="28" y="150" width="76" height="23" rx="5" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-opacity="0.65" stroke-width="1"/>
+      <text x="66" y="166" text-anchor="middle" fill="#10B981" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">TEST</text>
+      <text x="118" y="166" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">tests/test_ml.py + tests/test_api.py                -&gt; 9/9 passed</text>
     </g>
     <g opacity="0">
       <animate attributeName="opacity" keyTimes="0;0.19;0.21;0.93;0.98;1" values="0;0;1;1;0;0" dur="14.0s" repeatCount="indefinite"/>
-      <rect x="28" y="184" width="68" height="23" rx="5" fill="#38BDF8" fill-opacity="0.18" stroke="#38BDF8" stroke-opacity="0.65" stroke-width="1"/>
-      <text x="62" y="200" text-anchor="middle" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">MODEL</text>
-      <text x="108" y="200" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">Holdout (n=6,514): Precision=0.7875 | F1=0.6650     -&gt; Saved joblib</text>
+      <rect x="28" y="184" width="76" height="23" rx="5" fill="#38BDF8" fill-opacity="0.18" stroke="#38BDF8" stroke-opacity="0.65" stroke-width="1"/>
+      <text x="66" y="200" text-anchor="middle" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">MODEL</text>
+      <text x="118" y="200" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">Holdout (n=6,514): Precision=0.7875 | F1=0.6650     -&gt; Saved joblib</text>
     </g>
     <g opacity="0">
       <animate attributeName="opacity" keyTimes="0;0.26499999999999996;0.285;0.93;0.98;1" values="0;0;1;1;0;0" dur="14.0s" repeatCount="indefinite"/>
-      <rect x="28" y="218" width="68" height="23" rx="5" fill="#F59E0B" fill-opacity="0.18" stroke="#F59E0B" stroke-opacity="0.65" stroke-width="1"/>
-      <text x="62" y="234" text-anchor="middle" fill="#F59E0B" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">AUDIT</text>
-      <text x="108" y="234" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">compute_slice_metrics(): 8 demographic dimensions   -&gt; slice_output.txt</text>
+      <rect x="28" y="218" width="76" height="23" rx="5" fill="#F59E0B" fill-opacity="0.18" stroke="#F59E0B" stroke-opacity="0.65" stroke-width="1"/>
+      <text x="66" y="234" text-anchor="middle" fill="#F59E0B" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">AUDIT</text>
+      <text x="118" y="234" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">compute_slice_metrics(): 8 demographic dimensions   -&gt; slice_output.txt</text>
     </g>
     <g opacity="0">
       <animate attributeName="opacity" keyTimes="0;0.33999999999999997;0.36;0.93;0.98;1" values="0;0;1;1;0;0" dur="14.0s" repeatCount="indefinite"/>
-      <rect x="28" y="252" width="68" height="23" rx="5" fill="#22C55E" fill-opacity="0.18" stroke="#22C55E" stroke-opacity="0.65" stroke-width="1"/>
-      <text x="62" y="268" text-anchor="middle" fill="#22C55E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">LIVE</text>
-      <text x="108" y="268" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">POST /predict -&gt; HTTP 200 OK                        -&gt; Render Active</text>
+      <rect x="28" y="252" width="76" height="23" rx="5" fill="#22C55E" fill-opacity="0.18" stroke="#22C55E" stroke-opacity="0.65" stroke-width="1"/>
+      <text x="66" y="268" text-anchor="middle" fill="#22C55E" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11.5" font-weight="700">LIVE</text>
+      <text x="118" y="268" fill="#E2E8F0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13">POST /predict -&gt; HTTP 200 OK                        -&gt; Render Active</text>
     </g>
 </svg>
