@@ -1,10 +1,17 @@
-# Census Income Classification API — End-to-End MLOps Pipeline
+<div align="center">
+  <img src="assets/hero-banner.svg" alt="Census Income Classification API" width="100%" />
+  <br/><br/>
+  [![CI/CD Pipeline](https://github.com/kenseiAmit/census-income-api/actions/workflows/ci.yml/badge.svg)](https://github.com/kenseiAmit/census-income-api/actions/workflows/ci.yml)
+  [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+  [![FastAPI](https://img.shields.io/badge/FastAPI-REST%20Inference-009688.svg)](https://fastapi.tiangolo.com/)
+  [![Code Style: PEP8](https://img.shields.io/badge/code%20style-flake8%20(79%20chars)-black.svg)]()
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-[![CI/CD Pipeline](https://github.com/kenseiAmit/census-income-api/actions/workflows/ci.yml/badge.svg)](https://github.com/kenseiAmit/census-income-api/actions/workflows/ci.yml)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-REST%20Inference-009688.svg)](https://fastapi.tiangolo.com/)
-[![Code Style: PEP8](https://img.shields.io/badge/code%20style-flake8%20(79%20chars)-black.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+  <br/>
+  <img src="assets/live-demo.svg" alt="Live Execution Trace" width="96%" />
+</div>
+
+---
 
 An end-to-end production Machine Learning service predicting annual income brackets (`>50K` vs `<=50K`) on US Census Bureau demographic data—featuring **leakage-free feature encoding**, **automated demographic slice fairness evaluation**, **FastAPI Pydantic v2 inference**, **Model Card governance**, and **gated CI/CD deployment** (GitHub Actions + Render).
 
