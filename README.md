@@ -1,13 +1,13 @@
 <div align="center">
   <img src="assets/hero-banner.svg" alt="Census Income Classification API" width="100%" />
   <br/><br/>
-  [![CI/CD Pipeline](https://github.com/kenseiAmit/census-income-api/actions/workflows/ci.yml/badge.svg)](https://github.com/kenseiAmit/census-income-api/actions/workflows/ci.yml)
-  [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
-  [![FastAPI](https://img.shields.io/badge/FastAPI-REST%20Inference-009688.svg)](https://fastapi.tiangolo.com/)
-  [![Code Style: PEP8](https://img.shields.io/badge/code%20style-flake8%20(79%20chars)-black.svg)]()
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-  <br/>
+  <p>
+    <a href="https://github.com/kenseiAmit/census-income-api/actions/workflows/ci.yml"><img src="https://github.com/kenseiAmit/census-income-api/actions/workflows/ci.yml/badge.svg" alt="CI/CD Pipeline" /></a>
+    <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.11%2B-blue.svg" alt="Python 3.11+" /></a>
+    <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/FastAPI-REST%20Inference-009688.svg" alt="FastAPI" /></a>
+    <img src="https://img.shields.io/badge/code%20style-flake8%20%2879%20chars%29-black.svg" alt="Code Style: PEP8" />
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
+  </p>
   <img src="assets/live-demo.svg" alt="Live Execution Trace" width="96%" />
 </div>
 
