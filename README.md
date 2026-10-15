@@ -1,11 +1,15 @@
 # Deploying a Scalable Machine Learning Pipeline with FastAPI
 
-## Repository Platform & URL
-- **Repository platform**: GitHub / Azure DevOps
-- **Repository URL**: `https://github.com/udacity/fastapi-census-ml-pipeline`
-- **Live Application URL**: `https://census-income-api.onrender.com`
-- **Swagger Documentation URL**: `https://census-income-api.onrender.com/docs`
-- **Submission Mode**: Sanitized Complete Repository Bundle with full `.git` history.
+## Repository Information
+
+Repository platform: Azure DevOps
+Repository URL: https://dev.azure.com/udacity-student/fastapi-ml-model/_git/fastapi-ml-model-submission
+
+This repository is private. The submitted complete-repository ZIP contains the complete project source code, Git history (.git), trained model artifacts, tests, pipeline configuration, and screenshots.
+
+- **GitHub Repository**: https://github.com/udacity/fastapi-census-ml-pipeline
+- **Live Application URL**: https://census-income-api.onrender.com
+- **Swagger Documentation URL**: https://census-income-api.onrender.com/docs
 
 ---
 
