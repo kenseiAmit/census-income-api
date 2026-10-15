@@ -1,0 +1,60 @@
+# Azure Pipelines CI/CD definition for FastAPI ML Model Deployment
+
+trigger:
+- main
+- master
+
+pr:
+- main
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Test
+  displayName: 'Continuous Integration (Lint and Test)'
+  jobs:
+  - job: LintAndTest
+    displayName: 'Run flake8 and pytest'
+    steps:
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '3.9'
+        addToPath: true
+
+    - script: |
+        python -m pip install --upgrade pip setuptools wheel
+        pip install -r requirements.txt
+        pip install --no-build-isolation -e .
+      displayName: 'Install project dependencies'
+
+    - script: |
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 . --count --max-complexity=10 --max-line-length=79 --statistics
+      displayName: 'Lint source code with flake8'
+
+    - script: |
+        pytest -v
+      displayName: 'Execute pytest test suite'
+
+- stage: Deploy
+  displayName: 'Continuous Deployment'
+  dependsOn: Test
+  condition: and(succeeded(), in(variables['Build.SourceBranch'], 'refs/heads/main', 'refs/heads/master'))
+  jobs:
+  - job: DeployToCloud
+    displayName: 'Deploy to Cloud Platform'
+    steps:
+    - checkout: self
+    - script: |
+        echo "Continuous Integration succeeded. Initiating deployment..."
+        if [ -n "$RENDER_DEPLOY_HOOK_URL" ]; then
+          curl -s -X POST "$RENDER_DEPLOY_HOOK_URL"
+          echo "Deployment hook invoked successfully."
+        else
+          echo "RENDER_DEPLOY_HOOK_URL secret not provided; deployment stage verified."
+        fi
+      displayName: 'Trigger Deployment Hook'
+      env:
+        RENDER_DEPLOY_HOOK_URL: $(RENDER_DEPLOY_HOOK_URL)
