@@ -4,7 +4,7 @@ import argparse
 import sys
 import requests
 
-DEFAULT_URL = "http://127.0.0.1:8000/predict"
+DEFAULT_URL = "https://census-income-api-3hq5.onrender.com/predict"
 
 SAMPLE_PAYLOAD = {
     "age": 31,
