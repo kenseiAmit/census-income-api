@@ -2,19 +2,16 @@
 
 ## Repository Information
 
-Repository platform: Azure DevOps
-Repository URL: https://dev.azure.com/udacity-student/fastapi-ml-model/_git/fastapi-ml-model-submission
-
-This repository is private. The submitted complete-repository ZIP contains the complete project source code, Git history (.git), trained model artifacts, tests, pipeline configuration, and screenshots.
-
 - **GitHub Repository**: https://github.com/kenseiAmit/census-income-api
 - **Live Application URL**: https://census-income-api-3hq5.onrender.com
 - **Swagger Documentation URL**: https://census-income-api-3hq5.onrender.com/docs
 
+The repository is public and contains the complete project source code, Git commit history, trained model artifacts, unit tests, GitHub Actions CI/CD workflows, and required submission screenshots.
+
 ---
 
 ## Project Overview
-This project develops and operationalizes an end-to-end Machine Learning classification pipeline using Census Bureau data. The pipeline cleans the dataset, trains a Random Forest Classifier to predict whether an individual's salary exceeds \$50K per year, calculates slice-based fairness and performance metrics, and deploys the model via a production-ready FastAPI REST service with automated CI/CD pipelines (GitHub Actions & Azure Pipelines).
+This project develops and operationalizes an end-to-end Machine Learning classification pipeline using Census Bureau data. The pipeline cleans the dataset, trains a Random Forest Classifier to predict whether an individual's salary exceeds $50K per year, calculates slice-based fairness and performance metrics, and deploys the model via a production-ready FastAPI REST service with automated CI/CD pipelines (GitHub Actions & Azure Pipelines).
 
 ---
 
@@ -35,6 +32,7 @@ nd0821-c3-starter-code/
 │   ├── continuous_integration.png # Evidence of passing CI run (pytest & flake8)
 │   ├── continuous_deployment.png  # Evidence of successful cloud deployment
 │   ├── example.png                # Swagger UI showing POST body example
+│   ├── live_get.png               # Browser capture of GET / on live Render deployment
 │   └── live_post.png              # Terminal output from live_post.py execution
 ├── starter/
 │   ├── __init__.py
