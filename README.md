@@ -192,3 +192,4 @@ All screenshots required by the rubric are located in `screenshots/`:
 2. `screenshots/continuous_deployment.png` — Evidence of successful continuous deployment stage.
 3. `screenshots/example.png` — Swagger UI (/docs) displaying POST endpoint request schema with example values.
 4. `screenshots/live_post.png` — Terminal execution of `live_post.py` showing HTTP status 200 and model prediction.
+5. `screenshots/live_get.png` — Browser screenshot showing live root domain response on cloud deployment (`https://census-income-api.onrender.com/`).
