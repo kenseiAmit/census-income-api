@@ -3,7 +3,7 @@
 For additional information see the Model Card paper: https://arxiv.org/pdf/1810.03993.pdf
 
 ## Model Details
-- **Developer**: Amit Kumar Koshta
+- **Developer**: Amit Kumar
 - **Model Type**: Random Forest Classifier (`sklearn.ensemble.RandomForestClassifier`)
 - **Model Version**: 1.0.0
 - **Release Date**: July 2026
