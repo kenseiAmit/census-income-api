@@ -13,6 +13,8 @@
 
 ---
 
+![US Census Income MLOps & Subgroup Fairness API Blueprint](docs/images/architecture_blueprint.png)
+
 An end-to-end production Machine Learning service predicting annual income brackets (`>50K` vs `<=50K`) on US Census Bureau demographic data—featuring **leakage-free feature encoding**, **automated demographic slice fairness evaluation**, **FastAPI Pydantic v2 inference**, **Model Card governance**, and **gated CI/CD deployment** (GitHub Actions + Render).
 
 - **Live Cloud Endpoint:** https://census-income-api-3hq5.onrender.com
